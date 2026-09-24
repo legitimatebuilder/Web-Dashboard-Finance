@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <link rel="stylesheet" href="./CSS/Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="./JS/Script.js" defer></script>
+</head>
+
+<body>
+    <div class="side-menu">
+        <div class="logo">
+            <i class="fa-brands fa-alipay"></i>
+            <p>Pay<span>Do</span></p>
+        </div>
+        <div class="menu-items">
+            <div class="menu-items-top">
+                <a href="#" class="active"><i class="fa-solid fa-border-all"></i>Dashboard</a>
+                <a href="#"><i class="fa-solid fa-circle-user"></i>Accounts</a>
+                <a href="#"><i class="fa-solid fa-credit-card"></i>Cards</a>
+                <a href="#"><i class="fa-solid fa-cash-register"></i>Transactions</a>
+                <a href="#"><i class="fa-brands fa-amazon-pay"></i>Payment</a>
+                <a href="#"><i class="fa-solid fa-file-invoice"></i>Invoicing</a>
+                <a href="#"><i class="fa-solid fa-file"></i>Reports</a>
+            </div>
+            <div class="menu-items-bottom">
+                <a href="#"><i class="fa-solid fa-address-book"></i>Profile</a>
+                <a href="#"><i class="fa-solid fa-gear"></i>Settings</a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="top-bar">
+            <h2>Dashboard</h2>
+            <div class="top-right">
+                <div class="search">
+                    <input type="text" placeholder="search anything...">
+                </div>
+                <div class="icon-btn">
+                    <i class="fa-regular fa-bell"></i>
+                </div>
+                <div class="btn">
+                    + Create Account
+                </div>
+            </div>
+        </div>
+        <div class="account-balance">
+            <div class="total">
+                <h1>$220, 320.60</h1>
+                <p>Total balance from all accounts</p>
+            </div>
+            <div class="currencies">
+                <div class="currency">
+                    <div class="currency-type">USD</div>
+                    <h3>$46, 441.00</h3>
+                </div>
+                <div class="currency">
+                    <div class="currency-type">USD</div>
+                    <h3>$46, 441.00</h3>
+                </div>
+                <div class="currency">
+                    <div class="currency-type">USD</div>
+                    <h3>$46, 441.00</h3>
+                </div>
+            </div>
+        </div>
+        <div class="main-grid">
+            <div>
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-title">
+                            <p>Income</p>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                        <div class="value">$8, 189.00</div>
+                        <div class="card-title">
+                            <p>84 Transactions</p>
+                            <p class="percent">+10%</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-title">
+                            <p>Spendings</p>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                        <div class="value">$6, 117.00</div>
+                        <div class="card-title">
+                            <p>28 Transactions</p>
+                            <p class="percent">+36%</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="charts">
+                    <h3>Annual Income</h3>
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
+            <div class="latest-transactions">
+                <div class="card-title">
+                    <h3>Latest Transactions</h3>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+                <ul class="transactions">
+                    <li class="transaction">
+                        <div class="transaction-detail">
+                            <div class="type">
+                                <i class="fa-solid fa-cart-arrow-down"></i>
+                            </div>
+                            <div>
+                                <p>Amazon Purchase</p>
+                                <p class="date">28th Apr, 10:22 AM</p>
+                            </div>
+                        </div>
+                        <p>$120.50</p>
+                    </li>
+                    <li class="transaction">
+                        <div class="transaction-detail">
+                            <div class="type">
+                                <i class="fa-solid fa-square-rss"></i>
+                            </div>
+                            <div>
+                                <p>Netflix Subscription</p>
+                                <p class="date">27th Apr, 06:45 PM</p>
+                            </div>
+                        </div>
+                        <p>$15.99</p>
+                    </li>
+                    <li class="transaction">
+                        <div class="transaction-detail">
+                            <div class="type">
+                                <i class="fa-solid fa-burger"></i>
+                            </div>
+                            <div>
+                                <p>Mcdonald's Lunch</p>
+                                <p class="date">27th Apr, 01:15 PM</p>
+                            </div>
+                        </div>
+                        <p>$8.75</p>
+                    </li>
+                    <li class="transaction">
+                        <div class="transaction-detail">
+                            <div class="type">
+                                <i class="fa-brands fa-cash-app"></i>
+                            </div>
+                            <div>
+                                <p>Salary Credit</p>
+                                <p class="date">25th Apr, 09:00 AM</p>
+                            </div>
+                        </div>
+                        <p>$2500.00</p>
+                    </li>
+                    <li class="transaction">
+                        <div class="transaction-detail">
+                            <div class="type">
+                                <i class="fa-solid fa-taxi"></i>
+                            </div>
+                            <div>
+                                <p>Uber Ride</p>
+                                <p class="date">24th Apr, 07:45 PM</p>
+                            </div>
+                        </div>
+                        <p>$22.30</p>
+                    </li>
+                    <li class="transaction">
+                        <div class="transaction-detail">
+                            <div class="type">
+                                <i class="fa-solid fa-hotel"></i>
+                            </div>
+                            <div>
+                                <p>Hotel Booking</p>
+                                <p class="date">23rd Apr, 03:30 PM</p>
+                            </div>
+                        </div>
+                        <p>$320.00</p>
+                    </li>
+                    <li class="transaction">
+                        <div class="transaction-detail">
+                            <div class="type">
+                                <i class="fa-solid fa-ticket"></i>
+                            </div>
+                            <div>
+                                <p>Cinema Ticket</p>
+                                <p class="date">22nd Apr, 08:00 PM</p>
+                            </div>
+                        </div>
+                        <p>$12.00</p>
+                    </li>
+                    <li class="transaction">
+                        <div class="transaction-detail">
+                            <div class="type">
+                                <i class="fa-solid fa-carrot"></i>
+                            </div>
+                            <div>
+                                <p>Local Grocery Store</p>
+                                <p class="date">21st Apr, 05:20 PM</p>
+                            </div>
+                        </div>
+                        <p>$56.45</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+
+.side-menu {
+    background: #d82f5a;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    height: 70px;
+    padding: 1rem;
+}
+
+.logo i {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.logo p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.logo p span {
+    color: gold;
+}
+
+.menu-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 70px);
+    padding: 1rem;
+}
+
+.menu-items a {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.menu-items a:hover,
+.menu-items a.active {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    color: #222;
+}
+
+.main {
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top-bar h2 {
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.search {
+    background: #ffe0e8;
+    height: 40px;
+    width: 300px;
+    display: flex;
+    padding: 0 1rem;
+    border-radius: 8px;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+}
+
+.icon-btn {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffe0e8;
+    border-radius: 8px;
+}
+
+.btn {
+    height: 40px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    background: #d82f5a;
+    border-radius: 8px;
+}
+
+.account-balance {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.total h1 {
+    font-size: 4rem;
+}
+
+.currencies {
+    display: flex;
+    align-items: center;
+}
+
+.currency {
+    padding: 0 2rem;
+}
+
+.currency:nth-child(2) {
+    border-left: 2px solid #ffe0e8;
+    border-right: 2px solid #ffe0e8;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.card {
+    background: #ffe0e8;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.value {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.percent {
+    color: #74bb09;
+    font-weight: 700;
+}
+
+.latest-transactions {
+    background: #faf5f5;
+    border-radius: 8px;
+    padding: 1rem;
+    height: fit-content;
+}
+
+.latest-transactions .card-title {
+    margin-bottom: 0.5rem;
+}
+
+li {
+    list-style: none;
+}
+
+.transaction {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 0.5rem;
+}
+
+.transaction-detail {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.type {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffe0e8;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.date {
+    font-size: 0.8rem;
+    color: #999;
+}
+
+.charts {
+    margin-top: 2rem;
+}
